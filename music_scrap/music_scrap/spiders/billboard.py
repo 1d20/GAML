@@ -12,13 +12,15 @@ class ExampleSpider(CrawlSpider):
         'http://www.billboard.com/artists/top-100',
     )
     rules = (
-        # Rule(SgmlLinkExtractor(allow=('/artists/a')), callback='parse_singer'),
         Rule(SgmlLinkExtractor(allow=('/artists/?')), callback='parse_singer'),
     )
 
     def parse_singer(self, response):
         for item in response.xpath('//tr/td/div/span'):
-            singer = SingerItem()
-            singer['name'] = item.xpath('a/text()').extract()
-            singer['description'] = item.xpath('a/@href').extract()
-            yield singer
+            try:
+                singer = SingerItem()
+                singer['name'] = item.xpath('a/text()').extract()[0]
+                singer['description'] = item.xpath('a/@href').extract()[0]
+                singer.save()
+            except:
+                pass
