@@ -1,4 +1,2 @@
-from singer import *
-from song import *
-from songinfo import *
-from comment import *
+from utils import *
+from api import *
