@@ -68,9 +68,10 @@ $(document).ready(function() {
             url: '/api/singers/',
             type: 'GET',
             success: function(responce) {
+                console.log('responce', responce);
                 var obj = [];
-                for (var i = 0; i < responce.length; i++) {
-                    var singer = [responce[i].name, responce[i].description];
+                for (var i = 0; i < responce.results.length; i++) {
+                    var singer = [responce.results[i].name, responce.results[i].description];
                     obj.push(singer);
                 };
                 create_table(obj);
