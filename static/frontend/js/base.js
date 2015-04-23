@@ -15,7 +15,8 @@ $(document).ready(function () {
     data: data,
     minSpareRows: 1,
     colHeaders: true,
-    contextMenu: true
+    contextMenu: true,
+    columnSorting: true
   });
   
   
