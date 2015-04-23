@@ -39,7 +39,8 @@ $(document).ready(function() {
             colWidths: [200, 200],
             colHeaders: ["Name", "Description"],
             contextMenu: false,
-            columnSorting: true
+            columnSorting: true,
+            readOnly: true
         });
 
 
