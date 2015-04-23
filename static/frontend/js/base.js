@@ -15,7 +15,7 @@ $(document).ready(function () {
     data: data,
     minSpareRows: 1,
     colHeaders: true,
-    contextMenu: true,
+    contextMenu: false,
     columnSorting: true
   });
   
@@ -37,3 +37,14 @@ $(document).ready(function () {
   bindDumpButton();
 
 });
+function getSinger () {
+  $.ajax({
+    url: '/api/singers/',
+    data: getToken(),
+    type: 'GET',
+    success: function(data) {
+      console.log(data);
+    },
+    
+  });
+}
