@@ -20,6 +20,7 @@ $(document).ready(function() {
     function create_table(obj) {
         console.log('create_table called')
         console.log('data', obj);
+        container.innerHTML = '';
         hot = new Handsontable(container, {
             data: (function() {
                 var data = obj;
@@ -39,7 +40,8 @@ $(document).ready(function() {
             colWidths: [200, 200],
             colHeaders: ["Name", "Description"],
             contextMenu: false,
-            columnSorting: true
+            columnSorting: true,
+            readOnly: true
         });
 
 
@@ -58,24 +60,30 @@ $(document).ready(function() {
             });
         }
         bindDumpButton();
-
     }
+    getSinger();
 
 
-    function getSinger() {
+    function getSinger(letter) {
+        var letter = letter || 'A';
         var obj;
         $.ajax({
             url: '/api/singers/',
             type: 'GET',
+            data: 'letter=' + letter,
             success: function(responce) {
+                console.log('responce', responce);
                 var obj = [];
-                for (var i = 0; i < responce.length; i++) {
-                    var singer = [responce[i].name, responce[i].description];
+                for (var i = 0; i < responce.results.length; i++) {
+                    var singer = [responce.results[i].name, responce.results[i].description];
                     obj.push(singer);
                 };
                 create_table(obj);
             }
         });
     }
-    getSinger();
+    $('.ui-menu-item').click(function() {
+        console.log('this', this.firstChild.innerHTML)
+        getSinger(this.firstChild.innerHTML);
+    });
 });

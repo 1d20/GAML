@@ -1,6 +1,17 @@
+html{
+	background-color: #1D1F21;
+}
+
+
 .alpha_cont > ul > li{
 	display:inline;
 	padding: 1px;
+}
+
+.alpha_cont > ul > li > a{
+	color: #ebebeb;
+	font-family: Brush Script MT,cursive; 
+	cursor: pointer;
 }
 
 .alpha_cont > ul{
@@ -8,4 +19,20 @@
 	padding: 0;
 	list-style-type: none;
 	text-align: center;
+}
+
+.sing_table{
+	width: 20%;
+    margin: 0 auto;
+}
+
+.sing_table td, tr{
+    background-color: #2d2e2f;
+    color: #ebebeb;
+    
+}
+
+.sing_table table, td, tr{
+    border: 1px solid green;
+    color: #ebebeb;
 }
