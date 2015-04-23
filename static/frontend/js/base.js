@@ -20,6 +20,7 @@ $(document).ready(function() {
     function create_table(obj) {
         console.log('create_table called')
         console.log('data', obj);
+        container.innerHTML = '';
         hot = new Handsontable(container, {
             data: (function() {
                 var data = obj;
@@ -59,15 +60,17 @@ $(document).ready(function() {
             });
         }
         bindDumpButton();
-
     }
+    getSinger();
 
 
-    function getSinger() {
+    function getSinger(letter) {
+        var letter = letter || 'A';
         var obj;
         $.ajax({
             url: '/api/singers/',
             type: 'GET',
+            data: 'letter=' + letter,
             success: function(responce) {
                 console.log('responce', responce);
                 var obj = [];
@@ -79,5 +82,8 @@ $(document).ready(function() {
             }
         });
     }
-    getSinger();
+    $('.ui-menu-item').click(function() {
+        console.log('this', this.firstChild.innerHTML)
+        getSinger(this.firstChild.innerHTML);
+    });
 });
