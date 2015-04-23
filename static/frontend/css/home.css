@@ -1,5 +1,6 @@
 .alpha_cont > ul > li{
-	display:none;
+	display:inline;
+	padding: 1px;
 }
 
 .alpha_cont > ul{
