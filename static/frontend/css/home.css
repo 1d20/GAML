@@ -26,7 +26,13 @@ html{
     margin: 0 auto;
 }
 
-.handsonetable tr {
-    /*border: 1px solid green;*/
-    background-color: red;
+.sing_table td, tr{
+    background-color: #2d2e2f;
+    color: #ebebeb;
+    
+}
+
+.sing_table table, td, tr{
+    border: 1px solid green;
+    color: #ebebeb;
 }
