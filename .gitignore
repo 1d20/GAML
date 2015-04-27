@@ -2,3 +2,6 @@
 .DS_STORE
 *.pyc
 db.sqlite3
+static/*
+frontend/bower_components/*
+node_modules/*
