@@ -2,9 +2,9 @@ var compass, concat, config, gulp, install, uglify;
 
 gulp = require('gulp');
 concat = require('gulp-concat');
-compass = require('gulp-compass');
+//compass = require('gulp-compass');
 install = require('gulp-install');
-watch = require('gulp-watch');
+//watch = require('gulp-watch');
 uglify = require('gulp-uglify');
 
 config = require('./frontend/config');
