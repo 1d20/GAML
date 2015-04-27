@@ -1,5 +1,6 @@
 from fabric.api import local
 
+
 def updatedb():
 	local('pip install -r requirements.txt')
 	local('./manage.py syncdb')
@@ -14,3 +15,6 @@ def all():
 
 def run():
 	local('./manage.py runserver --insecure')
+
+def scrap():
+	local('music_scrap/music_scrap/scrapy crawl billboard --set FEED_URI=scraped_data.csv --set FEED_FORMAT=csv')
