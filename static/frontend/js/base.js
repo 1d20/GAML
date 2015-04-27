@@ -65,7 +65,7 @@ $(document).ready(function() {
 
 
     function getSinger(letter) {
-        var letter = letter || 'A';
+        letter = letter || 'A';
         var obj;
         $.ajax({
             url: '/api/singers/',
@@ -74,6 +74,7 @@ $(document).ready(function() {
             success: function(responce) {
                 console.log('responce', responce);
                 var obj = [];
+                console.log('res', responce);
                 for (var i = 0; i < responce.results.length; i++) {
                     var singer = [responce.results[i].name, responce.results[i].description];
                     obj.push(singer);

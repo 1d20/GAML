@@ -1,0 +1,3 @@
+function _get (argument) {
+    // body...
+}
