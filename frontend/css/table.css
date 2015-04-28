@@ -1,0 +1,20 @@
+.tablecontainer{
+	margin: 0 auto;
+  	width: 50%;
+}
+
+.pagination{
+	margin: 0;
+}
+
+/*.pagination > li > a, .pagination > .active > a{
+	color: #677565;
+}
+
+.pagination > .active > a{
+background-color: #81937F;
+}
+
+.pagination > .active > a:hover{
+background-color: #D8F6D5;
+}*/
