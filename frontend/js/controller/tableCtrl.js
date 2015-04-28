@@ -1,13 +1,13 @@
 app.controller('tableCtrl', ['$scope', 'ngTableParams', '$http',
     function($scope, ngTableParams, $http) {
-        $scope.getSingers = function() {
+        $scope.getSingers = function(page, count) {
             $http.get('/api/singers/').
             success(function(responce) {
                 console.log(responce);
                 //---add to table singers from server
                 $scope.tableParams = new ngTableParams({
-                    page: 1, // show first page
-                    count: 10 // count per page
+                    page: page, // show first page
+                    count: count // count per page
                 }, {
                     total: responce.count, // length of data
                     getData: function($defer, params) {
@@ -21,7 +21,7 @@ app.controller('tableCtrl', ['$scope', 'ngTableParams', '$http',
             });
         }
 
-        $scope.getSingers();
+        $scope.getSingers(1, 10);
         /*$scope.tableParams = new ngTableParams({
             page: 1, // show first page
             count: 10 // count per page
