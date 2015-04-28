@@ -9,15 +9,15 @@ app.config(['$urlRouterProvider', '$locationProvider', '$stateProvider', '$httpP
         /*
         ROUTING
         */
-        $urlRouterProvider.otherwise('/search');
+        $urlRouterProvider.otherwise('/table');
         $stateProvider
-            .state('search', {
-                url: '/search',
+            .state('table', {
+                url: '/table',
                 views: {
-                    'box@search': {
-                        templateUrl: '/static/frontend/templates/search.html',
+                    'table': {
+                        templateUrl: '/static/frontend/templates/table.html',
                         controller: function($scope) {
-                            console.log('search');
+                            console.log('table view');
                         }
                     }
                 }

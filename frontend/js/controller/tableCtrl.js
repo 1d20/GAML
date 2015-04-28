@@ -55,6 +55,7 @@ app.controller('tableCtrl', ['$scope', 'ngTableParams', '$http',
 
 
 
+
         $scope.getSingers = function() {
             $http.get('/api/singers/').
             success(function(responce) {
