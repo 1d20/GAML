@@ -6,6 +6,7 @@ app.config(['$urlRouterProvider', '$locationProvider', '$stateProvider', '$httpP
     function($urlRouterProvider, $locationProvider, $stateProvider, $httpProvider) {
 
 
+
         /*
         ROUTING
         */
