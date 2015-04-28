@@ -1,7 +1,11 @@
-<ul>
-  <li>элемент маркированного списка</li>
-</ul> 
-
-<ol>
-  <li>элемент нумерованного списка</li>
-</ol>
+<div class="table" ng-controller="tableCtrl">
+	<p><strong>Page:</strong> {{tableParams.page()}}</p>
+    <p><strong>Count per page:</strong> {{tableParams.count()}}</p>
+    
+    <table ng-table="tableParams" class="table">
+    <tr ng-repeat="user in $data">
+        <td data-title="'Name'">{{user.name}}</td>
+        <td data-title="'Age'">{{user.age}}</td>
+    </tr>
+    </table>
+</div>

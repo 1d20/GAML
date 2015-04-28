@@ -26,7 +26,7 @@ gulp.task('vendors:css', function() {
 gulp.task('vendors:js', function() {
     return gulp.src(config.vendors.js.src)
         .pipe(concat('vendors.js'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(gulp.dest(config.vendors.js.dest));
 });
 

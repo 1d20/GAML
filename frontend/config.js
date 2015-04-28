@@ -42,21 +42,17 @@ module.exports = {
     vendors: {
         css: {
             src: [
-                bower + '/bootswatch-dist/css/bootstrap.css',
-                bower + '/css-toggle-switch/dist/toggle-switch.css',
-                bower + '/fontawesome/css/font-awesome.css',
-                bower + '/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css',
-                bower + '/jquery.taginput/src/jquery.taginput.css',
-                bower + '/bootstrap-star-rating/css/star-rating.css',
-                bower + '/Hover/css/hover.css',
-                bower + '/angular-ui-select/dist/select.css'
+                bower + '/ng-table/dist/ng-table.css',
+                bower + '/bootstrap/dist/css/bootstrap.css'
             ],
             dest: dest + '/css'
         },
         js: {
             src: [
                 bower + '/angular/angular.js',
-                bower + '/angular-ui-router/release/angular-ui-router.js'
+                bower + '/angular-ui-router/release/angular-ui-router.js',
+                bower + '/ng-table/dist/ng-table.js'
+                //bower + '/angular-smart-table/dist/smart-table.js'
             ],
             dest: dest + '/js'
         },

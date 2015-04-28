@@ -1,12 +1,11 @@
-var app = angular.module('TravelApp', [
-    'ui.router'
+var app = angular.module('GAML', [
+    'ui.router',
+    'ngTable',
+    //'smart-table'
 ])
 
 app.config(['$urlRouterProvider', '$locationProvider', '$stateProvider', '$httpProvider',
     function($urlRouterProvider, $locationProvider, $stateProvider, $httpProvider) {
-
-
-
         /*
         ROUTING
         */
