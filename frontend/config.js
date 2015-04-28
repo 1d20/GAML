@@ -55,29 +55,8 @@ module.exports = {
         },
         js: {
             src: [
-                bower + '/jquery/dist/jquery.js',
-                bower + '/jquery.taginput/src/jquery.taginput.src.js',
-                bower + '/bootswatch-dist/js/bootstrap.js',
-                bower + '/bootswatch-dist/js/bootstrap.js',
-                bower + '/moment/moment.js',
-                bower + '/moment/locale/ru.js',
-                bower + '/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js',
                 bower + '/angular/angular.js',
-                bower + '/angular-ui-router/release/angular-ui-router.js',
-                bower + '/angular-translate/angular-translate.js',
-                bower + '/angular-cookies/angular-cookies.js',
-                bower + '/bootstrap-star-rating/js/star-rating.js',
-                bower + '/angular-translate-loader-url/angular-translate-loader-url.js',
-                bower + '/angular-animate/angular-animate.js',
-                bower + '/angular-bootstrap/ui-bootstrap.js',
-                bower + '/angular-bootstrap/ui-bootstrap-tpls.js',
-                bower + '/angular-sanitize/angular-sanitize.js',
-                bower + '/angular-ui-select/dist/select.js',
-                bower + '/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
-                bower + '/lodash/dist/lodash.js',
-                bower + '/angular-google-maps/dist/angular-google-maps.js'
-
-
+                bower + '/angular-ui-router/release/angular-ui-router.js'
             ],
             dest: dest + '/js'
         },
